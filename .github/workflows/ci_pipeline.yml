@@ -5,7 +5,9 @@ name: Student Registry App CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: 
+      - 'main'
+      - 'releases/**'
 
 jobs:
   build:
@@ -20,5 +22,4 @@ jobs:
         node-version: '18.x'
         cache: 'npm'
     - run: npm install
-    - run: npm start
     - run: npm test
